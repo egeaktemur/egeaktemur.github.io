@@ -4,11 +4,6 @@
     <source src="wave.mp3" type="audio/mpeg" />
   </audio>
 
-  <script>
-    var audio = document.getElementById("myaudio");
-    audio.volume = 0.1;
-  </script>
-
   <script type="importmap">
     {
       "imports": {
@@ -27,41 +22,38 @@
     <meta name="theme-color" content="#000000" />
     <meta name="author" content="Ege Aktemur" />
     <link rel="stylesheet" target="_blank" rel="noopener noreferrer" href="./styles.css" />
-    <title>Ege's Website</title>
   </head>
 
   <body>
-    <div class="canvas-container"></div>
-    <main id="name", display >
-      <section class="timeline">
-        <article class="timeline-entry">
-          <h2 class="timeline-co type-comp">
-            <span class="timeline-title">Ege Aktemur</span>
-          </h2>
-        </article>
-      </section>
-    </main>
-
+    <br />
+    <div class="mode-switch-container">
+      <span class="mode-label boring">Boring Mode</span>
+      <label class="switch">
+        <input type="checkbox" id="modeToggle">
+        <span class="slider round"></span>
+      </label>
+      <span class="mode-label fun">Fun Mode</span>
+    </div>
+    <br />
     <main id="about">
-      <section class="timeline">
-        <article class="timeline-entry">
-          <h2 class="timeline-co type-comp">
-            <span class="timeline-title">About</span>
+      <section class="entry">
+        <article class="entry-item">
+          <h2 class="entry-co type-comp">
+            <span class="entry-title">About</span>
           </h2>
         </article>
-        <article class="timeline-entry">
-          <h2 class="timeline-co type-comp">
-            <span class="timeline-title">EGE AKTEMUR</span>
+        <article class="entry-item">
+          <h2 class="entry-co type-comp">
+            <span class="entry-title">EGE AKTEMUR</span>
           </h2>
-          <div class="timeline-description">
+          <div class="entry-description">
             <p>
               <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/egeaktemur/">LinkedIn</a
               ><br />
               <a target="_blank" rel="noopener noreferrer" href="https://github.com/egeaktemur">GitHub</a><br />
               +90 (542) 456 11 99<br />
               <a target="_blank" rel="noopener noreferrer" href="mailto:egeaktemur@gmail.com">egeaktemur@gmail.com</a
-              ><br />
-              Orta Mah. Universite Cad. No:27 Tuzla İstanbul
+              >
             </p>
           </div>
         </article>
@@ -69,122 +61,136 @@
     </main>
 
     <main id="education">
-      <section class="timeline">
-        <article class="timeline-entry">
-          <h2 class="timeline-co type-comp">
-            <span class="timeline-title">Education</span>
+      <section class="entry">
+        <article class="entry-item">
+          <h2 class="entry-co type-comp">
+            <span class="entry-title">Education</span>
           </h2>
-          <div class="timeline-description">
+          <div class="entry-description">
             <p>
-              Senior Student with 3.91/4.0 current GPA. 6 times high honored
-              (GPA over 3.75 each term)
+              3.7/4.0 GPA. 6 times high honored (GPA over 3.75 each term)
             </p>
           </div>
         </article>
-        <article class="timeline-entry">
-          <h2 class="timeline-co type-comp">
-            <span class="timeline-comp"><a target="_blank" rel="noopener noreferrer" href="https://www.sabanciuniv.edu/en">Sabanci University</a></span><br />
-            <span class="timeline-role">Computer Science and Engineering</span
+        <article class="entry-item">
+          <h2 class="entry-co type-comp">
+            <span class="entry-comp"><a target="_blank" rel="noopener noreferrer" href="https://www.sabanciuniv.edu/en">Sabanci University</a></span><br />
+            <span class="entry-role">Computer Science and Engineering</span
             ><br />
-            <span class="timeline-time">2019 - Present</span>
+            <span class="entry-time">2019 - Present</span>
           </h2>
+          <div class="entry-description">
+            <p>
+              Advanced Programming, Data Structures, Algorithms, Database Systems, Operating Systems, 
+              Computer Architectures, Artificial Intelligence, Parallel Computing, Theory of Computation, Computer Networks, 
+              Cryptography, Machine Learning
+            </p>
+            <p>
+              Calculus, Linear Algebra, Probability, Discrete Mathematics, Mathematical Analysis
+            </p>
+          </div>
         </article>
-        <article class="timeline-entry">
-          <h2 class="timeline-co type-comp">
-            <span class="timeline-comp"><a target="_blank" rel="noopener noreferrer" href="https://www.sabanciuniv.edu/en">Sabanci University</a></span><br />
-            <span class="timeline-role">Business Analytics (Minor)</span><br />
-            <span class="timeline-time">2022 - Present</span>
+        <article class="entry-item">
+          <h2 class="entry-co type-comp">
+            <span class="entry-comp"><a target="_blank" rel="noopener noreferrer" href="https://www.sabanciuniv.edu/en">Sabanci University</a></span><br />
+            <span class="entry-role">Business Analytics (Minor)</span><br />
+            <span class="entry-time">2022 - Present</span>
           </h2>
+          <div class="entry-description">
+            <p>
+              Introduction to Business Analytics, Management Information Systems, Optimization Modeling in Business Analytics, Statistical Modelling
+            </p>
+          </div>
         </article>
       </section>
     </main>
 
     <main id="work experience">
-        <section class="timeline">
-            <article class="timeline-entry">
-                <h2 class="timeline-co type-comp">
-                    <span class="timeline-title">Work Experience</span>
+        <section class="entry">
+            <article class="entry-item">
+                <h2 class="entry-co type-comp">
+                    <span class="entry-title">Work Experience</span>
                 </h2>
             </article>
-            <article class="timeline-entry">
-              <h2 class="timeline-co type-comp">
-                  <span class="timeline-comp"><a target="_blank" rel="noopener noreferrer" href="https://www.vodafone.com.tr/">Vodafone</a></span><br>
-                  <span class="timeline-role">Part-time Data Analyst</span><br>
-                  <span class="timeline-time">Nov 2023 - Present</span>
+            <article class="entry-item">
+              <h2 class="entry-co type-comp">
+                  <span class="entry-comp"><a target="_blank" rel="noopener noreferrer" href="https://www.vodafone.com.tr/">Vodafone</a></span><br>
+                  <span class="entry-role">Part-time Data Analyst</span><br>
+                  <span class="entry-time">Nov 2023 - Present</span>
               </h2>
-              <div class="timeline-description">
+              <div class="entry-description">
                   <p>
                     Optimizing business processes and market strategy in Marketplace Department through data analytics.
                   </p>
               </div>
           </article>
-            <article class="timeline-entry">
-                <h2 class="timeline-co type-comp">
-                    <span class="timeline-comp"><a target="_blank" rel="noopener noreferrer" href="https://desion.de/en/start/">Desion GbmH</a></span><br>
-                    <span class="timeline-role">Machine Learning Intern</span><br>
-                    <span class="timeline-time">Jun 2023 - Sep 2023</span>
+            <article class="entry-item">
+                <h2 class="entry-co type-comp">
+                    <span class="entry-comp"><a target="_blank" rel="noopener noreferrer" href="https://desion.de/en/start/">Desion GbmH</a></span><br>
+                    <span class="entry-role">Machine Learning Intern</span><br>
+                    <span class="entry-time">Jun 2023 - Sep 2023</span>
                 </h2>
-                <div class="timeline-description">
+                <div class="entry-description">
                     <p>
                         Designed/Implemented several RL models for catching moving high variant objects. Then built robot arms with 3d cameras which are controlled by the models.
                     </p>
                 </div>
             </article>
-            <article class="timeline-entry">
-                <h2 class="timeline-co type-comp">
-                    <span class="timeline-comp"><a target="_blank" rel="noopener noreferrer" href="https://www.jotform.com/">Jotform</a></span><br>
-                    <span class="timeline-role">Junior Data Engineer</span><br>
-                    <span class="timeline-time">Oct 2022 - Jun 2023</span>
+            <article class="entry-item">
+                <h2 class="entry-co type-comp">
+                    <span class="entry-comp"><a target="_blank" rel="noopener noreferrer" href="https://www.jotform.com/">Jotform</a></span><br>
+                    <span class="entry-role">Junior Data Engineer</span><br>
+                    <span class="entry-time">Oct 2022 - Jun 2023</span>
                 </h2>
-                <div class="timeline-description">
+                <div class="entry-description">
                     <p>
                         Improved the general health of the data warehouses and data marts by either creating new DWs/DMs or editing them in the data warehouse department.
                     </p>
                 </div>
             </article>
-            <article class="timeline-entry">
-                <h2 class="timeline-co type-comp">
-                    <span class="timeline-comp"><a target="_blank" rel="noopener noreferrer" href="https://www.sabanciuniv.edu/en">Sabanci University</a></span><br>
-                    <span class="timeline-role">Learning Assistant</span><br>
-                    <span class="timeline-time">Oct 2022 - Jan 2023</span>
+            <article class="entry-item">
+                <h2 class="entry-co type-comp">
+                    <span class="entry-comp"><a target="_blank" rel="noopener noreferrer" href="https://www.sabanciuniv.edu/en">Sabanci University</a></span><br>
+                    <span class="entry-role">Learning Assistant</span><br>
+                    <span class="entry-time">Oct 2022 - Jan 2023</span>
                 </h2>
-                <div class="timeline-description">
+                <div class="entry-description">
                     <p>
                         Assisted Onur Varol in the CS 412 (Machine Learning) Course by giving recitations, holding weekly office hours, and grading homework assignments/exams.
                     </p>
                 </div>
             </article>
-            <article class="timeline-entry">
-                <h2 class="timeline-co type-comp">
-                    <span class="timeline-comp"><a target="_blank" rel="noopener noreferrer" href="https://www.jotform.com/">Jotform</a></span><br>
-                    <span class="timeline-role">Data Science Intern</span><br>
-                    <span class="timeline-time">Jul 2022 - Sep 2022</span>
+            <article class="entry-item">
+                <h2 class="entry-co type-comp">
+                    <span class="entry-comp"><a target="_blank" rel="noopener noreferrer" href="https://www.jotform.com/">Jotform</a></span><br>
+                    <span class="entry-role">Data Science Intern</span><br>
+                    <span class="entry-time">Jul 2022 - Sep 2022</span>
                 </h2>
-                <div class="timeline-description">
+                <div class="entry-description">
                     <p>
                         Created/organized data marts and detected anomalies using Google BigQuery.
                     </p>
                 </div>
             </article>
-            <article class="timeline-entry">
-                <h2 class="timeline-co type-comp">
-                    <span class="timeline-comp"><a target="_blank" rel="noopener noreferrer" href="https://monovi.com.tr/">Monovi Information Technology A.S.</a></span><br>
-                    <span class="timeline-role">Software-Blockchain Specialist</span><br>
-                    <span class="timeline-time">Feb 2022 - Jun 2022</span>
+            <article class="entry-item">
+                <h2 class="entry-co type-comp">
+                    <span class="entry-comp"><a target="_blank" rel="noopener noreferrer" href="https://monovi.com.tr/">Monovi Information Technology A.S.</a></span><br>
+                    <span class="entry-role">Software-Blockchain Specialist</span><br>
+                    <span class="entry-time">Feb 2022 - Jun 2022</span>
                 </h2>
-                <div class="timeline-description">
+                <div class="entry-description">
                     <p>
                         Developed Token factory and DAPP for Emlaklira.com project.
                     </p>
                 </div>
             </article>
-            <article class="timeline-entry">
-                <h2 class="timeline-co type-comp">
-                    <span class="timeline-comp"><a target="_blank" rel="noopener noreferrer" href="https://monovi.com.tr/">Monovi Information Technology A.S.</a></span><br>
-                    <span class="timeline-role">Intern</span><br>
-                    <span class="timeline-time">Jan 2022 - Feb 2022</span>
+            <article class="entry-item">
+                <h2 class="entry-co type-comp">
+                    <span class="entry-comp"><a target="_blank" rel="noopener noreferrer" href="https://monovi.com.tr/">Monovi Information Technology A.S.</a></span><br>
+                    <span class="entry-role">Intern</span><br>
+                    <span class="entry-time">Jan 2022 - Feb 2022</span>
                 </h2>
-                <div class="timeline-description">
+                <div class="entry-description">
                     <p>
                         Developed a warehouse management application using SQL, SharePoint, PowerApps and Balsamiq.
                     </p>
@@ -194,28 +200,33 @@
     </main>
 
     <main id="skills">
-      <section class="timeline">
-        <article class="timeline-entry">
-          <h2 class="timeline-co type-comp">
-            <span class="timeline-comp">Languages</h2>
-            <div class="timeline-description">
+      <section class="entry">
+        <article class="entry-item">
+          <h2 class="entry-co type-comp">
+              <span class="entry-title">Skills</span>
+          </h2>
+        </article>
+        <article class="entry-item">
+          <h2 class="entry-co type-comp">
+            <span class="entry-subtitle">Languages</h2>
+            <div class="entry-description">
               <p>Turkish, English, German</p>
           </div>
         </article>
-        <article class="timeline-entry">
-          <h2 class="timeline-co type-comp">
-            <span class="timeline-comp">Programming Languages</h2>
-          <div class="timeline-description">
+        <article class="entry-item">
+          <h2 class="entry-co type-comp">
+            <span class="entry-subtitle">Programming Languages</h2>
+          <div class="entry-description">
             <p>
               C++, SQL, PHP, C#, Solidity, CSS, Python, JavaScript, HTML, Java,
               Verilog
             </p>
           </div>
         </article>
-        <article class="timeline-entry">
-          <h2 class="timeline-co type-comp">
-            <span class="timeline-comp">Programming Concepts</h2>
-          <div class="timeline-description">
+        <article class="entry-item">
+          <h2 class="entry-co type-comp">
+            <span class="entry-subtitle">Programming Concepts</h2>
+          <div class="entry-description">
             <p>
               Data Science, OOP, RL, Statistics, AI, Logic Design, ML,
               Databases, HPC, Cloud, Smart Contracts
@@ -226,106 +237,106 @@
     </main>
 
     <main id="project">
-        <section class="timeline">
-            <article class="timeline-entry">
-                <h2 class="timeline-co type-comp">
-                    <span class="timeline-title">Projects</span>
+        <section class="entry">
+            <article class="entry-item">
+                <h2 class="entry-co type-comp">
+                    <span class="entry-title">Projects</span>
                 </h2>
             </article>
-            <article class="timeline-entry">
-                <h2 class="timeline-co type-comp">
-                    <span class="timeline-comp">Heck Meck Game using Distributed Computing with RL bots, and TLA+ validation</span><br>
-                    <span class="timeline-time">Jan 2023 - Present</span>
+            <article class="entry-item">
+                <h2 class="entry-co type-comp">
+                    <span class="entry-comp">Distributed Heck Meck Game</span><br>
+                    <span class="entry-time">Jan 2023 - Present</span>
                 </h2>
-                <div class="timeline-description">
+                <div class="entry-description">
                     <p>
                         Developed a distributed computing version of the Heck Meck game with reinforcement learning bots and validated the implementation using TLA+.
                     </p>
                 </div>
             </article>
-            <article class="timeline-entry">
-                <h2 class="timeline-co type-comp">
-                    <span class="timeline-comp">Detecting and Solving Performance-related Bugs in HPC using NLP models</span><br>
-                    <span class="timeline-time">Jan 2023 - Jun 2023</span>
+            <article class="entry-item">
+                <h2 class="entry-co type-comp">
+                    <span class="entry-comp">LLMs in HPC</span><br>
+                    <span class="entry-time">Jan 2023 - Jun 2023</span>
                 </h2>
-                <div class="timeline-description">
+                <div class="entry-description">
                     <p>
-                        Developed a model using Natural Language Processing (NLP) to detect and solve performance-related bugs in High Performance Computing (HPC) applications.
+                        Used LLMs to detect and solve performance-related bugs in High Performance Computing (HPC) applications.
                     </p>
                 </div>
             </article>
-            <article class="timeline-entry">
-                <h2 class="timeline-co type-comp">
-                    <span class="timeline-comp">Symmetric Encryption using MIPS Assembly</span><br>
-                    <span class="timeline-time">Jan 2023 - Jun 2023</span>
+            <article class="entry-item">
+                <h2 class="entry-co type-comp">
+                    <span class="entry-comp">Symmetric Encryption using MIPS Assembly</span><br>
+                    <span class="entry-time">Jan 2023 - Jun 2023</span>
                 </h2>
-                <div class="timeline-description">
+                <div class="entry-description">
                     <p>
                         Implemented symmetric encryption algorithms using MIPS assembly language for secure data transmission.
                     </p>
                 </div>
             </article>
-            <article class="timeline-entry">
-                <h2 class="timeline-co type-comp">
-                    <span class="timeline-comp">Slant Puzzle Solver with CSP Solver</span><br>
-                    <span class="timeline-time">Jan 2023 - Jun 2023</span>
+            <article class="entry-item">
+                <h2 class="entry-co type-comp">
+                    <span class="entry-comp">Slant Puzzle Solver with CSP Solver</span><br>
+                    <span class="entry-time">Jan 2023 - Jun 2023</span>
                 </h2>
-                <div class="timeline-description">
+                <div class="entry-description">
                     <p>
                         Developed a Constraint Satisfaction Problem (CSP) solver to solve slant puzzles efficiently.
                     </p>
                 </div>
             </article>
-            <article class="timeline-entry">
-                <h2 class="timeline-co type-comp">
-                    <span class="timeline-comp">Kakuro Puzzle Solver with CUDA/OpenMP</span><br>
-                    <span class="timeline-time">Jan 2023 - Jun 2023</span>
+            <article class="entry-item">
+                <h2 class="entry-co type-comp">
+                    <span class="entry-comp">Kakuro Puzzle Solver with CUDA/OpenMP</span><br>
+                    <span class="entry-time">Jan 2023 - Jun 2023</span>
                 </h2>
-                <div class="timeline-description">
+                <div class="entry-description">
                     <p>
                         Implemented a Kakuro puzzle solver using CUDA and OpenMP to parallelize the solving process and improve efficiency.
                     </p>
                 </div>
             </article>
-            <article class="timeline-entry">
-                <h2 class="timeline-co type-comp">
-                    <span class="timeline-comp">Socket Programming Quiz App</span><br>
-                    <span class="timeline-time">Sep 2022 - Jan 2023</span>
+            <article class="entry-item">
+                <h2 class="entry-co type-comp">
+                    <span class="entry-comp">Socket Programming Quiz App</span><br>
+                    <span class="entry-time">Sep 2022 - Jan 2023</span>
                 </h2>
-                <div class="timeline-description">
+                <div class="entry-description">
                     <p>
                         Developed a quiz application using socket programming to enable real-time communication between the server and clients.
                     </p>
                 </div>
             </article>
-            <article class="timeline-entry">
-                <h2 class="timeline-co type-comp">
-                    <span class="timeline-comp">ML Model for deciding if a Twitter Account is Bot or not and Political or not</span><br>
-                    <span class="timeline-time">Jan 2022 - Jun 2022</span>
+            <article class="entry-item">
+                <h2 class="entry-co type-comp">
+                    <span class="entry-comp">ML Model for Twitter Accounts</span><br>
+                    <span class="entry-time">Jan 2022 - Jun 2022</span>
                 </h2>
-                <div class="timeline-description">
+                <div class="entry-description">
                     <p>
                         Developed a machine learning model to classify Twitter accounts as bots or humans and further classify them as political or non-political.
                     </p>
                 </div>
             </article>
-            <article class="timeline-entry">
-                <h2 class="timeline-co type-comp">
-                    <span class="timeline-comp">Bike Sharing Data Analysis</span><br>
-                    <span class="timeline-time">Sep 2021 - Jan 2022</span>
+            <article class="entry-item">
+                <h2 class="entry-co type-comp">
+                    <span class="entry-comp">Bike Sharing Data Analysis</span><br>
+                    <span class="entry-time">Sep 2021 - Jan 2022</span>
                 </h2>
-                <div class="timeline-description">
+                <div class="entry-description">
                     <p>
                         Analyzed bike sharing data to identify trends, patterns, and potential areas for improvement to optimize bike sharing services.
                     </p>
                 </div>
             </article>
-            <article class="timeline-entry">
-                <h2 class="timeline-co type-comp">
-                    <span class="timeline-comp">Public Transit Path Finder with Linked List</span><br>
-                    <span class="timeline-time">Jan 2021 - Jun 2021</span>
+            <article class="entry-item">
+                <h2 class="entry-co type-comp">
+                    <span class="entry-comp">Public Transit Path Finder with Linked List</span><br>
+                    <span class="entry-time">Jan 2021 - Jun 2021</span>
                 </h2>
-                <div class="timeline-description">
+                <div class="entry-description">
                     <p>
                         Developed a path-finding application for public transit systems using linked lists to optimize routes and travel times.
                     </p>
@@ -335,6 +346,5 @@
     </main>
     <canvas id="bg"></canvas>
   </body>
-
   <script type="module" src="./main.js"></script>
 </html>

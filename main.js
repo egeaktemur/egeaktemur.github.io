@@ -1,5 +1,9 @@
 import * as THREE from "three";
 
+var audio = document.getElementById("myaudio");
+let fun_mode = false;
+audio.volume = 0.1;
+audio.pause();
 const worldWidth = 128;
 const worldDepth = 5;
 let raycaster = new THREE.Raycaster();
@@ -7,6 +11,28 @@ let pointer = new THREE.Vector2();
 
 let scene, camera, renderer, clock, mesh, geometry, material1, light;
 let crates = [];
+
+document.getElementById("modeToggle").addEventListener('change', function() {
+  console.log(this.checked);
+  if(this.checked) {
+    audio.play();
+    fun_mode = true;
+    for (let i = 0; i < crates.length; i++) {
+      crates[i].crElement.style.display = 'none';
+      crates[i].crateMesh.visible = true;
+      crates[i].textMesh.visible = true;
+    }
+  } 
+  else {
+    audio.pause();
+    fun_mode = false;
+    for (let i = 0; i < crates.length; i++) {
+      crates[i].crElement.style.display = 'grid';
+      crates[i].crateMesh.visible = false;
+      crates[i].textMesh.visible = false;
+    }
+  }
+});
 
 // Initialize the camera
 function initCamera() {
@@ -79,39 +105,61 @@ class Crate {
     );
     this.crateMesh.material.reflectivity = 0.3;
     this.crateMesh.userData.originalColor = 0x966f33;
+    this.crateMesh.material.color.set(this.crateMesh.userData.originalColor);
     this.crateMesh.position.set(position.x + 60, position.y, position.z);
+
+    this.crateMesh.rotation.x = Math.random() * 2 * Math.PI;
+    this.crateMesh.rotation.y = Math.random() * 2 * Math.PI;
+    this.crateMesh.rotation.z = Math.random() * 2 * Math.PI;
+
+    this.originalPosition = position;
 
     scene.add(this.textMesh);
     scene.add(this.crateMesh);
 
     crates.push(this);
+
+    this.crateMesh.visible = false;
+    this.textMesh.visible = false;
+    this.crElement.style.display = 'grid';
   }
 
   hover(intersected) {
-    if (intersected) {
-      this.crateMesh.material.transparent = true;
-      this.crateMesh.material.opacity = 0.5;
-    } else {
-      this.crateMesh.material.color.set(this.crateMesh.userData.originalColor);
-      this.crateMesh.material.opacity = 1;
+    if (fun_mode) {
+      if (intersected) {
+        this.crateMesh.material.transparent = true;
+        this.crateMesh.material.opacity = 0.5;
+      } else {
+        this.crateMesh.material.color.set(this.crateMesh.userData.originalColor);
+        this.crateMesh.material.opacity = 1;
+      }
     }
   }
 
   click(intersected) {
-    if (intersected) {
-      this.crElement.style.display = this.crElement.style.display == "grid" ? "none" : "grid";
-    }
-    else {
-      this.crElement.style.display = "none";
+    if (fun_mode) {
+      if (intersected) {
+        this.crElement.style.display = this.crElement.style.display == "grid" ? "none" : "grid";
+      }
+      else {
+        if (this.crElement.id != "modeToggle"){
+          this.crElement.style.display = "none";
+        }
+        else{
+          this.crElement.style.display = "grid";
+        }
+      }
     }
   }
 
   update(positionAttribute, i, time) {
-    if (this.crateMesh.position.x <= -window.innerWidth / 2 - 200) {
-      this.textMesh.position.x = window.innerWidth / 2 + 200;
-      this.textMesh.position.z = 5;
-      this.crateMesh.position.x = window.innerWidth / 2 + 270;
-      this.crateMesh.position.z = 5;
+    if (this.crateMesh.position.x <= -window.innerWidth / 2 - 250) {
+      this.textMesh.position.x = this.originalPosition.x + window.innerWidth;
+      this.crateMesh.position.x = this.originalPosition.x + window.innerWidth + 70;
+
+      this.textMesh.position.z = this.originalPosition.z+300;
+      this.crateMesh.position.z = this.originalPosition.z+300;
+
       this.textMesh.rotation.y = -1;
     }
 
@@ -151,7 +199,7 @@ async function addObjects() {
 function init() {
   scene = new THREE.Scene();
   scene.background = new THREE.Color( 0x14123b );
-	scene.fog = new THREE.FogExp2( 0x14123b, 0.001 );
+  scene.fog = new THREE.FogExp2( 0x14123b, 0.001 );
 
   initCamera();
   initRenderer();
@@ -242,4 +290,4 @@ function onWindowResize() {
   renderer.setSize(window.innerWidth, window.innerHeight);
 }
 
-init();
+init()
